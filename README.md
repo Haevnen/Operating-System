@@ -1,5 +1,7 @@
 # Introduction
 
+- [Course syllabus](https://pages.cs.wisc.edu/~remzi/Classes/537/Fall2021/)
+
 Chapter | What To Do
 --------|-----------
 [Introduction](http://www.cs.wisc.edu/~remzi/OSTEP/intro.pdf) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | No homework (yet)
@@ -8,7 +10,7 @@ Chapter | What To Do
 
 Chapter | What To Do | Solution
 --------|------------|---------
-[Abstraction: Processes](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf) | Run [process-run.py](cpu-intro) | [solution.md](cpu-intro)
+[Abstraction: Processes](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf) | Run [process-run.py](cpu-intro/) | [solution.md](cpu-intro/solution.md)
 [Process API](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf) | Run [fork.py](cpu-api) and write some code
 [Direct Execution](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) | Write some code
 [Scheduling Basics](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | Run [scheduler.py](cpu-sched)
