@@ -4,3 +4,12 @@
 - The reason is the child has its own copy of x, so every change to this copy is
   not reflected in the main process.
 
+[codeQ1](question_1.c)
+
+**2. Can both the child and parent access the file descriptor returned by open()? What happens when they are writing to the file concurrently, i.e., at the same time?**
+- Yes, after `fork()`, both child and parent can access the same file descriptor
+  returned by `open()`
+- Both fp refer to the same underlying open file description
+- If both parent and child write concurrently to the same file description
+  - the writes are a race -> order is not guaranteed -> output is unpredictable
+[codeQ2](question_2.c)
