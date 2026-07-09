@@ -24,3 +24,11 @@
   program no longer exists and execution begins at `main()` of new program.
 - They differ only in how arguments are passed (list vs array), whether the
   executable is searched on PATH...
+[codeQ4](question_4.c)
+
+**5. What does wait() return? What happens if you use wait() in the child?**
+- The PID of the child is returned to the calling process (when it stops or be
+  terminate). Otherwise, a value of -1 is returned
+- If you call `wait()` in child process. The result is depend on whether the
+  child process has any children. If it has no child process -> `wait()` return
+  -1 immediately. Otherwise, it is blocked until the child's children exits.
