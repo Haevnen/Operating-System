@@ -39,7 +39,6 @@ int main(int argc, char *argv[]) {
             sleep(1);
             const char *msg = "from child\n";
             write(fp, msg, strlen(msg));
-            // process c
             exit(0);
         }
     }

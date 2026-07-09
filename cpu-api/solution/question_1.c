@@ -34,7 +34,6 @@ int main(int argc, char *argv[]) {
             sleep(1);
             printf("x = %d\n", x);
             x = 200;
-            // process c
             exit(0);
         }
     }

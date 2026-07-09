@@ -16,3 +16,11 @@
 
 **3. can you do this without calling wait() in the parent?**
 - No, parent and child process runs concurrently, and we can not ensure the running order due to OS scheduler
+[codeQ3](question_3.c)
+
+**4. Why do you think there are so many variants of the same basic call?**
+- The `exec()` family of functions all perform the same task, they replace the
+  current process with a new program - with the same PID. After successful `exec()`, the original
+  program no longer exists and execution begins at `main()` of new program.
+- They differ only in how arguments are passed (list vs array), whether the
+  executable is searched on PATH...

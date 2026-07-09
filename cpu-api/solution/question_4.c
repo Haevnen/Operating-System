@@ -1,8 +1,9 @@
 /*
- Write another program using fork(). The child process should
-print “hello”; the parent process should print “goodbye”. You should
-try to ensure that the child process always prints first; can you do
-this without calling wait() in the parent?
+Write a program that calls fork() and then calls some form of
+exec() to run the program /bin/ls. See if you can try all of the
+variants of exec(), including (on Linux) execl(), execle(),
+execlp(), execv(), execvp(), and execvpe(). Why do
+you think there are so many variants of the same basic call?
 */
 
 #include <assert.h>
@@ -31,13 +32,12 @@ int main(int argc, char *argv[]) {
         sleep(2);
         // process b
         if (fork_or_die() == 0) {
-            printf("hello\n");
             sleep(1);
-            exit(0);
+            char *args[] = {"/bin/ls", NULL};
+            execv(args[0], args);
         }
     } else {
         wait_or_die();
-        printf("goodbye\n");
     }
     return 0;
 }
