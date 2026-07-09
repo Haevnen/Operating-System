@@ -13,3 +13,6 @@
 - If both parent and child write concurrently to the same file description
   - the writes are a race -> order is not guaranteed -> output is unpredictable
 [codeQ2](question_2.c)
+
+**3. can you do this without calling wait() in the parent?**
+- No, parent and child process runs concurrently, and we can not ensure the running order due to OS scheduler

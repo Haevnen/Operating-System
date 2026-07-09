@@ -1,9 +1,8 @@
 /*
-Write a program that opens a file (with the open() system call)
-and then calls fork() to create a new process. Can both the child
-and parent access the file descriptor returned by open()? What
-happens when they are writing to the file concurrently, i.e., at the
-same time?
+ Write another program using fork(). The child process should
+print “hello”; the parent process should print “goodbye”. You should
+try to ensure that the child process always prints first; can you do
+this without calling wait() in the parent?
 */
 
 #include <assert.h>
@@ -27,23 +26,19 @@ int fork_or_die() {
 }
 
 int main(int argc, char *argv[]) {
-    int fp = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
-    assert(fp >= 0);
-    const char *msg = "from parent\n";
-    write(fp, msg, strlen(msg));
     // process a
     if (fork_or_die() == 0) {
         sleep(2);
         // process b
         if (fork_or_die() == 0) {
+            printf("hello\n");
             sleep(1);
-            const char *msg = "from child\n";
-            write(fp, msg, strlen(msg));
             // process c
             exit(0);
         }
+    } else {
+        wait_or_die();
+        printf("goodbye\n");
     }
-    wait_or_die();
-    close(fp);
     return 0;
 }
