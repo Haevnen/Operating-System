@@ -30,11 +30,9 @@ int main(int argc, char *argv[]) {
     if (fork_or_die() == 0) {
         sleep(2);
         // process b
-        if (fork_or_die() == 0) {
-            printf("hello\n");
-            sleep(1);
-            exit(0);
-        }
+        printf("hello\n");
+        sleep(1);
+        exit(0);
     } else {
         wait_or_die();
         printf("goodbye\n");

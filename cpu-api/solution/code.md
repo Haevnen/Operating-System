@@ -32,3 +32,7 @@
 - If you call `wait()` in child process. The result is depend on whether the
   child process has any children. If it has no child process -> `wait()` return
   -1 immediately. Otherwise, it is blocked until the child's children exits.
+
+**6. When would waitpid() be useful**
+- wait for a specific child only
+- useful when your parent has multiple children and you care which one finishes first

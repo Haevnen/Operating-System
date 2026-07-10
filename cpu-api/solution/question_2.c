@@ -35,12 +35,9 @@ int main(int argc, char *argv[]) {
     if (fork_or_die() == 0) {
         sleep(2);
         // process b
-        if (fork_or_die() == 0) {
-            sleep(1);
-            const char *msg = "from child\n";
-            write(fp, msg, strlen(msg));
-            exit(0);
-        }
+        const char *msg = "from child\n";
+        write(fp, msg, strlen(msg));
+        exit(0);
     }
     wait_or_die();
     close(fp);

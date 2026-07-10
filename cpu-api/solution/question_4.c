@@ -31,11 +31,9 @@ int main(int argc, char *argv[]) {
     if (fork_or_die() == 0) {
         sleep(2);
         // process b
-        if (fork_or_die() == 0) {
-            sleep(1);
-            char *args[] = {"/bin/ls", NULL};
-            execv(args[0], args);
-        }
+        sleep(1);
+        char *args[] = {"/bin/ls", NULL};
+        execv(args[0], args);
     } else {
         wait_or_die();
     }
