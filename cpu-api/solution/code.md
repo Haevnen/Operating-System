@@ -35,4 +35,11 @@
 
 **6. When would waitpid() be useful**
 - wait for a specific child only
-- useful when your parent has multiple children and you care which one finishes first
+- useful when your parent has multiple children and you care which one finishes
+  first
+[codeQ6](question_6.c)
+
+**7. What happens if the child calls printf() to print some output after closing the descriptor?**
+- It will print nothing if child process close standard output
+- But it still works in parent process.
+[codeQ7](question_7.c)
