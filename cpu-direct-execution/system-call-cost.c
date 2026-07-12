@@ -10,7 +10,7 @@ int main() {
     // gettimeofday() has microsecond resolution, while modern system calls
     // often take only several hundred nanoseconds.
     // That is why we should repeat the system call many times.
-    int N = 1000000;
+    const int N = 1000000;
     struct timeval start, end;
 
     gettimeofday(&start, NULL);
