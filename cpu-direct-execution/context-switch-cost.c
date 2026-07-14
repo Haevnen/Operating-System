@@ -23,7 +23,7 @@ int main() {
         
         * Each blocking read forces the scheduler to switch
         between the two processes.
- */
+    */
 
     int fd1[2], fd2[2];
     assert(pipe(fd1) == 0);
