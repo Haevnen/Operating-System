@@ -118,6 +118,7 @@ Final statistics:
 
   Average -- Response: 133.33  Turnaround 333.33  Wait 133.33
 ```
+
 **3. Now do the same, but also with the RR scheduler and a time-slice of 1**
 - A: 200, B:200, C:200
   - Round Robin + time-slice = 1:
@@ -128,3 +129,37 @@ Final statistics:
   - Round Robin + time-slice = 1:
     - Response time: (0 + 1 + 2) / 3 = 1
     - Turnaround time: (298 + 499 + 600) / 3 = 465.67
+
+**4. For what types of workloads does SJF deliver the same turnaround times as FIFO?**
+- SJF delivers the same turnaround times as FIFO when all jobs arrive in
+  non-descending order of their CPU burst times. 
+  - E.g., 200, 200, 200 or 100, 200, 200, 300
+
+**5. For what types of workloads and quantum lengths (interrupt timer) does SJF deliver the same response times as RR?**
+- SJF delivers the same response times as RR when RR's quantum length is large
+  enough that no process is preempted and all jobs arrive in non-descending
+  order of their CPU burst times.
+  - E.g., A:2, B:4, C:6 and quantum length is 10
+    - So, the running be like
+    ```shell
+    0      2      6      12
+    |--P1--|--P2--|--P3--|
+    ```
+
+**6. What happens to response time with SJF as job lengths increase? Can you use the simulator to demonstrate the trend?**
+- In SJF, when the CPU burst lengths of all jobs increase proportionally, the
+  response time of later job also increase because they must wait longer for
+  earlier jobs to finish.
+- The first job's response time remains 0
+- Consequently, the average response time increase.
+
+**7. What happens to response time with RR as quantum lengths increase? Can you write an equation that gives the worst-case response time, given N jobs?**
+- A larger quantum means fewer context switches. Call A is the quantum length 
+    - The first job's response time remains 0
+    - The second job must wait for one quantum: A
+    - The third job must wait for two quantum: 2 * A
+    - ...
+    - The last process must wait for N-1 quantum: (N-1) * A
+    - So the response time = (0 + A + 2*A + ... + (N-1)*A) / N
+- Therefore, as the quantum increases, the response time will increase also
+  (every process must wait longer for its first execution)
