@@ -15,7 +15,7 @@ Chapter | What To Do | Solution
 [Direct Execution](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) | Write some code | [system-call-cost](cpu-direct-execution/system-call-cost.c) and [context-switch-cost](cpu-direct-execution/context-switch-cost.c)
 [Scheduling Basics](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) | Run [scheduler.py](cpu-sched) | [solution.md](cpu-sched/solution.md)
 [MLFQ Scheduling](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf)	| Run [mlfq.py](cpu-sched-mlfq) | [solution.md](cpu-sched-mlfq/solution.md)
-[Lottery Scheduling](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) | Run [lottery.py](cpu-sched-lottery)
+[Lottery Scheduling](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf) | Run [lottery.py](cpu-sched-lottery) | [solution.md](cpu-sched-lottery/solution.md)
 [Multiprocessor Scheduling](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-sched-multi.pdf) | Run [multi.py](cpu-sched-multi)
 [Abstraction: Address Spaces](http://www.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf) | Write some code
 [VM API](http://www.cs.wisc.edu/~remzi/OSTEP/vm-api.pdf) | Write some code
