@@ -3,14 +3,11 @@
 - [Course syllabus](https://pages.cs.wisc.edu/~remzi/Classes/537/Fall2021/)
 - [CPU virtualization summary](./cpu-virtualization-summary.md)
 
-Chapter | What To Do
---------|-----------
-[Introduction](http://www.cs.wisc.edu/~remzi/OSTEP/intro.pdf) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | No homework (yet)
-
 # Virtualization
 
 Chapter | What To Do | Solution
 --------|------------|---------
+[Introduction](http://www.cs.wisc.edu/~remzi/OSTEP/intro.pdf) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | No homework (yet)
 [Abstraction: Processes](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf) | Run [process-run.py](cpu-intro/) | [solution.md](cpu-intro/solution.md)
 [Process API](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf) | Run [fork.py](cpu-api) and write some code | [simulation](cpu-api/solution/simulation.md) and [code](cpu-api/solution/code.md)
 [Direct Execution](http://www.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf) | Write some code | [system-call-cost](cpu-direct-execution/system-call-cost.c) and [context-switch-cost](cpu-direct-execution/context-switch-cost.c)
