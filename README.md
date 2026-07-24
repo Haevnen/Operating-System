@@ -1,9 +1,13 @@
-# Introduction
+# Course information
 
 - [Course syllabus](https://pages.cs.wisc.edu/~remzi/Classes/537/Fall2021/)
-- [CPU virtualization summary](./cpu-virtualization-summary.md)
 
 # Virtualization
+
+## Chapter summary
+- [CPU virtualization summary](./cpu-virtualization-summary.md)
+
+## Homework
 
 Chapter | What To Do | Solution
 --------|------------|---------
